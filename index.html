@@ -25,24 +25,24 @@
 	<section class="section">
 		<div class="container">
 			<div class="box mgb-small mgt-small">
-				<div class="level">
-					<div class="level-item has-text-centered">
+				<div class="level is-mobile is-flex-wrap-wrap">
+					<div class="level-item has-text-centered mb-2">
 						<button class="button is-light" onclick="backOneYear()">-1 Year</button>
 					</div>
-					<div class="level-item has-text-centered">
+					<div class="level-item has-text-centered mb-2">
 						<button class="button is-light" onclick="backOneMonth()">-1 Month</button>
 					</div>
-					<div class="level-item has-text-centered">
+					<div class="level-item has-text-centered mb-2">
 						<button class="button is-light" onclick="today()">Today</button>
 					</div>
-					<div class="level-item has-text-centered">
+					<div class="level-item has-text-centered mb-2">
 						<button class="button is-light" onclick="forwardsOneMonth()">+1 Month</button>
 					</div>
-					<div class="level-item has-text-centered">
+					<div class="level-item has-text-centered mb-2">
 						<button class="button is-light" onclick="forwardsOneYear()">+1 Year</button>
 					</div>
 				</div>
-				<div>
+				<div class="table-container">
 					<table class="table block" id="table">
 						<thead>
 							<tr>
@@ -114,7 +114,7 @@
 					</table>
 				</div>
 				<div class="level" id="jumpForm">
-					<div class="field level-item is-horizontal">
+					<div class="field level-item is-horizontal mb-2">
 						<div class="field-label is-normal">
 					  		<label class="label">Month</label>
 					  	</div>
@@ -137,7 +137,7 @@
 					    </div>
 					  </div>
 					</div>
-					<div class="field level-item is-horizontal">
+					<div class="field level-item is-horizontal mb-2">
 						<div class="field-label is-normal">
 					  		<label class="label">Year</label>
 						</div>
@@ -145,7 +145,7 @@
 					    	<input class="input" type="number" id="year">
 					  	</div>
 					</div>
-					<div class="field is-horizontal level-item">
+					<div class="field is-horizontal level-item mb-2">
 					  <div class="field-label"></div>
 					  <div class="field-body">
 					    <div class="field">
