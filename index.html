@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calendar</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+	<!-- Most of the CSS is dealt with by Bulma so I haven't bothered with external CSS -->
+	<style type="text/css">
+		#table {
+			margin: 0 auto;
+		}
+		td {
+			text-align: center!important;
+		}
+		#jumpForm {
+			align-self: center;
+		}
+	</style>
+</head>
+<body>
+	<section class="hero">
+	  	<div class="hero-body"></div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="box mgb-small mgt-small">
+				<div class="level">
+					<div class="level-item has-text-centered">
+						<button class="button is-light" onclick="backOneYear()">-1 Year</button>
+					</div>
+					<div class="level-item has-text-centered">
+						<button class="button is-light" onclick="backOneMonth()">-1 Month</button>
+					</div>
+					<div class="level-item has-text-centered">
+						<button class="button is-light" onclick="today()">Today</button>
+					</div>
+					<div class="level-item has-text-centered">
+						<button class="button is-light" onclick="forwardsOneMonth()">+1 Month</button>
+					</div>
+					<div class="level-item has-text-centered">
+						<button class="button is-light" onclick="forwardsOneYear()">+1 Year</button>
+					</div>
+				</div>
+				<div>
+					<table class="table block" id="table">
+						<thead>
+							<tr>
+								<th>Sunday</th>
+								<th>Monday</th>
+								<th>Tuesday</th>
+								<th>Wednesday</th>
+								<th>Thursday</th>
+								<th>Friday</th>
+								<th>Saturday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="week1">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="week2">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="week3">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="week4">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="week5">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="week6">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="level" id="jumpForm">
+					<div class="field level-item is-horizontal">
+						<div class="field-label is-normal">
+					  		<label class="label">Month</label>
+					  	</div>
+					  	<div class="control">
+					    <div class="select">
+					      <select id="month">
+					        <option value="0">Janurary</option>
+					        <option value="1">February</option>
+					        <option value="2">March</option>
+					        <option value="3">April</option> 
+					        <option value="4">May</option>
+					        <option value="5">June</option>
+					        <option value="6">July</option>
+					        <option value="7">August</option>
+					        <option value="8">September</option>
+					        <option value="9">October</option>
+					        <option value="10">November</option>
+					        <option value="11">December</option>
+					      </select>
+					    </div>
+					  </div>
+					</div>
+					<div class="field level-item is-horizontal">
+						<div class="field-label is-normal">
+					  		<label class="label">Year</label>
+						</div>
+					  	<div class="control">
+					    	<input class="input" type="number" id="year">
+					  	</div>
+					</div>
+					<div class="field is-horizontal level-item">
+					  <div class="field-label"></div>
+					  <div class="field-body">
+					    <div class="field">
+					      <div class="control">
+					        <button class="button is-primary" onclick="jumpToDate()">
+					          Jump to date
+					        </button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
